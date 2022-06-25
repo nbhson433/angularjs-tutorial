@@ -48,6 +48,8 @@ mainModule.directive('randomNinja', [function() {
       ninja: '=',
       title: '='
     },
+    transclude: true,
+    // replace: true,
     templateUrl: 'views/random.html',
     controller: function($scope) {
       $scope.random = Math.floor(Math.random() * 4)
