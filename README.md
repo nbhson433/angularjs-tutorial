@@ -55,3 +55,11 @@ Bộ lọc có thể được thêm vào AngularJS để định dạng dữ li�
 [-> modules](https://www.geeksforgeeks.org/angularjs-modules/?ref=gcse)
 
 ## ng-inclue directive
+
+## ng-submit directive
+
+## ng-src directive
+
+## view & router
+
+## http

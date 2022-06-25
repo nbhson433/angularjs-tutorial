@@ -7,7 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="content/css/style.css">
-  <script src="app/lib/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js">
+  </script>
   <script src="app/app.js"></script>
 </head>
 
@@ -16,52 +19,9 @@
   <!-- <ng-include src="'header.html'"></ng-include> -->
   <div ng-include="'header.html'"></div>
 
-  <hr>
+  <main ng-view></main>
 
-  <!-- 2 ways binding -->
-  <div>
-    <input type="number" ng-model="number" placeholder="Enter your number">
-    <p>Your number: {{number}}</p>
-    <p>Number + Number = {{number + number}}</p>
-  </div>
 
-  <hr>
-
-  <!-- ng-init -->
-  <div>
-    <p ng-init="numbers=[1,2,3,4]">Numbers[2]: {{numbers[1]}}</p>
-    <p ng-init="color='orange'" class="{{color}}">Number</p>
-  </div>
-
-  <hr>
-
-  <!-- ng-repeat -->
-  <div ng-init="ninja=['Son', 'Khoa', 'Thong']">
-    <ul>
-      <li ng-repeat="ninja in ninja">{{ninja}}</li>
-    </ul>
-  </div>
-
-  <hr>
-
-  <!-- ng-controller -->
-  <div ng-controller="mainController">
-    {{message}}
-  </div>
-
-  <hr>
-
-  <!-- fillter -->
-  <div ng-controller="mainController">
-    <input type="text" ng-model="search">
-    <ul>
-      <li ng-repeat="ninja in ninja | orderBy: '-name' | filter: search">
-        {{ninja.name}} - {{ninja.rate | currency: '₫' : 3 }}
-      </li>
-    </ul>
-  </div>
-
-  <hr>
 </body>
 
 </html>

@@ -1,14 +1,56 @@
-var mainModule = angular.module('mainModule', [])
+var mainModule = angular.module('mainModule', ['ngRoute'])
 
-mainModule.config(() => {
+mainModule.config(['$routeProvider', function($routeProvider) {
+  $routeProvider
+  .when('/home', {
+    templateUrl: 'views/home.html',
+    controller: 'mainController'
+  })
+  .when('/directory', {
+    templateUrl: 'views/directory.html',
+    controller: 'mainController'
+  })
+  .otherwise({
+    redirectTo: '/home'
+  })
+}])
 
-})
-
-mainModule.controller('mainController', ['$scope', ($scope) => {
+mainModule.controller('mainController', ['$scope', '$http', function($scope, $http) {
   $scope.message = 'Hey! this is a message!'
-  $scope.ninja = [ 
-    { name: 'Son', age: 18, rate: 5000 },
-    { name: 'Khoa', age: 19, rate: 13200 },
-    { name: 'Thong',age: 20, rate: 7800 }
-  ]
+
+  $scope.addNinja = function() {
+    $scope.ninja.push({ 
+      name: $scope.newNinja.name,
+      age: $scope.newNinja.age,
+      rate: $scope.newNinja.rate
+    })
+  }
+ 
+  // $http.get('data/main.json').success(function(data) {
+  //   $scope.ninja = data
+  // })
+
+  $http({
+    method: 'GET',
+    url: 'data/main.json'
+  }).then(function (response){
+    $scope.ninja = response.data
+  },function (error){
+
+  });
+}])
+
+
+mainModule.directive('randomNinja', [function() {
+  return {
+    restrict: 'E',
+    scope: {
+      ninja: '=',
+      title: '='
+    },
+    templateUrl: 'views/random.html',
+    controller: function($scope) {
+      $scope.random = Math.floor(Math.random() * 4)
+    }
+  }
 }])
