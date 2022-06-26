@@ -65,3 +65,15 @@ Bộ lọc có thể được thêm vào AngularJS để định dạng dữ li�
 ## http
 
 ## ng-transclude & Replace
+
+## validate
+
+ng-pristine: when form/input no used yet ($pristine)
+ng-dirty: when form/input has been used ($dirty)
+
+ng-untouched: when input not has been touched
+ng-touched: when input has been touched ($touched)
+
+ng-valid - wwhen a form field valid ($valid)
+ng-invalid - wwhen a form field is not valid ($invalid)
+
