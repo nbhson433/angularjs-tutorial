@@ -3,7 +3,7 @@
 }
 
 main.ng-enter {
-  transition: .5s linear all;
+  transition: 0.5s linear all;
   opacity: 0;
 }
 
@@ -13,7 +13,7 @@ main.ng-enter.ng-enter-active {
 
 /* enter */
 #ninja-list line.ng-enter {
-  transition: .5s linear all;
+  transition: 0.5s linear all;
   opacity: 0;
   transform: translateY(30px);
 }
@@ -24,7 +24,7 @@ main.ng-enter.ng-enter-active {
 
 /* leave */
 #ninja-list li.ng-leave {
-  transition: .5s linear all;
+  transition: 0.5s linear all;
   opacity: 1;
   transform: translateX(0px);
 }
@@ -34,11 +34,11 @@ main.ng-enter.ng-enter-active {
 }
 
 #ninja-list li.ng-leave-stagger {
-  transition-delay: .2s;
+  transition-delay: 0.2s;
   transition-duration: 0;
 }
 
-input.ng-invalid.ng-touched ,
+input.ng-invalid.ng-touched,
 textarea.ng-invalid.ng-touched {
   border: 2px solid red;
 }
