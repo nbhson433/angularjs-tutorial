@@ -1,6 +1,6 @@
 # Directive
 
-## ng-app
+## ng-bind-template
 
 - `ng-app` directive trong AngularJS được sử dụng để xác định phần tử gốc của một ứng dụng AngularJS.
 - Directive này tự động khởi tạo ứng dụng AngularJS khi tải trang. Nó có thể được sử dụng để tải các mô-đun khác nhau trong Ứng dụng AngularJS. 
@@ -20,12 +20,6 @@
 - `ng-controller` directive trong AngularJS được sử dụng để thêm controller vào ứng dụng.
 - Nó có thể được sử dụng để thêm các phương thức, hàm và biến có thể được gọi trong một số sự kiện như nhấp chuột, v.v. để thực hiện một số hành động nhất định.
 
-
-## ng-bind
-
-- `ng-bind` trong AngularJS được sử dụng để ràng buộc / thay thế nội dung văn bản của bất kỳ phần tử HTML cụ thể nào bằng giá trị được nhập trong biểu thức đã cho.
-- Giá trị của nội dung HTML được chỉ định cập nhật bất cứ khi nào giá trị của biểu thức thay đổi trong ng-bind.
-
 ## ng-repeat
 
 - `ng-repeat` là một công cụ tiện dụng để lặp lại một bộ mã HTML một số lần hoặc một lần cho mỗi mục trong một bộ sưu tập các mục.
@@ -39,6 +33,7 @@
 - Nó được hỗ trợ bởi tất cả các phần tử HTML.
 
 ## ng-if
+
 - `ng-if` trong AngularJS được sử dụng để loại bỏ hoặc tạo lại một phần của phần tử HTML dựa trên một biểu thức.
 > hiden element
 - Ng-if khác với ng-hide vì nó loại bỏ hoàn toàn phần tử trong DOM thay vì chỉ ẩn phần hiển thị của phần tử. Nếu biểu thức bên trong nó là false thì phần tử sẽ bị xóa và nếu nó là true thì phần tử sẽ được thêm vào DOM.
