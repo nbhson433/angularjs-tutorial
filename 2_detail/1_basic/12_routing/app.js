@@ -10,7 +10,7 @@ function route($routeProvider, $locationProvider) {
   // $locationProvider.html5Mode(true);
 
   $routeProvider
-    .when("/", {
+    .when("/home", {
       templateUrl: "/home.html",
       controller: "app-controller",
     })
