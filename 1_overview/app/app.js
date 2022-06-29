@@ -45,6 +45,10 @@ function route($routeProvider, $locationProvider) {
 }
 
 function mainController($scope, $http) {
+
+  $scope.title="'Ninja excellence'"
+  $scope.description="'Custom directive'"
+
   $scope.message = "Hey! this is a message!";
   $scope.inputNumber = 10
 

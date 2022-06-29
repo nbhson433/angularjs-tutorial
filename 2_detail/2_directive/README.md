@@ -55,3 +55,9 @@ AngularJS | `ng-open` Directive
 AngularJS | `ng-options` Directive
 AngularJS | `ng-selected` Directive
 AngularJS | `ng-non`-bindable Directive
+
+Có 3 kiểu prefixes mà AngularJS cung cấp đó là
+
+"@" ( Text binding / one-way binding )
+"=" ( Direct model binding / two-way binding )
+"&" ( Behaviour binding / Method binding )
